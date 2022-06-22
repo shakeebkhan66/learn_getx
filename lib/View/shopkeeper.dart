@@ -79,12 +79,44 @@ class ShoppingPage extends StatelessWidget {
                 },
               ),
             ),
+<<<<<<< HEAD
             GetX<CartController>(builder: (controller) {
               return Text(
                 'Total amount: \$ ${controller.totalPrice}',
                 style: const TextStyle(fontSize: 32, color: Colors.white),
               );
             }),
+=======
+            // GetX<CartController>(builder: (controller) {
+            //   return Text(
+            //     'Total amount: \$ ${controller.totalPrice}',
+            //     style: const TextStyle(fontSize: 32, color: Colors.white),
+            //   );
+            // }),
+
+            // TODO we can use GetBuilder Too instead of GetX or Obx
+            // GetBuilder<CartController>(
+            //   builder: (controller){
+            //     return Text(
+            //       'Total Amount: \$ ${controller.totalTestAmount}',
+            //       style: const TextStyle(fontSize: 32, color: Colors.white),
+            //     );
+            //   },
+            // ),
+
+            // TODO we can also perform same functionalities by using OBX
+            // TODO Obx has no builder and controller so we can use it when we
+            //  have the instance of our Controller class
+
+            // TODO Lets make a Obx
+            Obx((){
+              return Text(
+                "Total Amount is : \$ ${cartController.totalPrice}",
+                style: TextStyle(fontSize: 32, color: Colors.white),
+              );
+            }),
+
+>>>>>>> 2c07d81 (State Management with GetX)
             const SizedBox(height: 100),
           ],
         ),
@@ -98,7 +130,11 @@ class ShoppingPage extends StatelessWidget {
         ),
         label: GetX<CartController>(builder: (controller) {
           return Text(
+<<<<<<< HEAD
             controller.count.toString(),
+=======
+            controller.nameOfProduct.toString(),
+>>>>>>> 2c07d81 (State Management with GetX)
             style: const TextStyle(color: Colors.black, fontSize: 24),
           );
         }),
